@@ -163,7 +163,7 @@ one,Died,3,"Braund, Mr. Owen Harris",M,22.0,one,0,A/5 21171,7.25,,S
 162,Survived,2,"Watt, Mrs. James (Elizabeth ""Bessie"" Inglis Milne)",F,40.0,0,0,C.A. 33595,15.75,,S
 163,Died,3,"Bengtsson, Mr. John Viktor",M,26.0,0,0,347068,7.775,,S
 164,Died,3,"Calic, Mr. Jovo",M,17.0,0,0,315093,8.6625,,S
-165,Died,3,"Panula, Master. Eino Viljami",M,one,4,one,3101295,39.6875,,S
+165,Died,3,"Panula, Master. Eino Viljami",M,,4,one,3101295,39.6875,,S
 166,Survived,3,"Goldsmith, Master. Frank John William ""Frankie""",M,9.0,0,2,363291,20.525,,S
 167,Survived,one,"Chibnall, Mrs. (Edith Martha Bowerman)",F,,0,one,113505,55.0,E33,S
 168,Died,3,"Skoog, Mrs. William (Anna Bernhardina Karlsson)",F,45.0,one,4,347088,27.9,,S
@@ -171,7 +171,7 @@ one,Died,3,"Braund, Mr. Owen Harris",M,22.0,one,0,A/5 21171,7.25,,S
 170,Died,3,"Ling, Mr. Lee",M,28.0,0,0,1601,56.4958,,S
 171,Died,one,"Van der hoef, Mr. Wyckoff",M,61.0,0,0,111240,33.5,B19,S
 172,Died,3,"Rice, Master. Arthur",M,4.0,4,one,382652,29.125,,Q
-173,Survived,3,"Johnson, Miss. Eleanor Ileen",F,one,one,one,347742,11.1333,,S
+173,Survived,3,"Johnson, Miss. Eleanor Ileen",F,,one,one,347742,11.1333,,S
 174,Died,3,"Sivola, Mr. Antti Wilhelm",M,21.0,0,0,STON/O 2. 3101280,7.925,,S
 175,Died,one,"Smith, Mr. James Clinch",M,56.0,0,0,17764,30.6958,A7,C
 176,Died,3,"Klasen, Mr. Klas Albin",M,18.0,one,one,350404,7.8542,,S
@@ -182,7 +182,7 @@ one,Died,3,"Braund, Mr. Owen Harris",M,22.0,one,0,A/5 21171,7.25,,S
 181,Died,3,"Sage, Miss. Constance Gladys",F,,8,2,CA. 2343,69.55,,S
 182,Died,2,"Pernot, Mr. Rene",M,,0,0,SC/PARIS 2131,15.05,,C
 183,Died,3,"Asplund, Master. Clarence Gustaf Hugo",M,9.0,4,2,347077,31.3875,,S
-184,Survived,2,"Becker, Master. Richard F",M,one,2,one,230136,39.0,F4,S
+184,Survived,2,"Becker, Master. Richard F",M,,2,one,230136,39.0,F4,S
 185,Survived,3,"Kink-Heilmann, Miss. Luise Gretchen",F,4.0,0,2,315153,22.025,,S
 186,Died,one,"Rood, Mr. Hugh Roscoe",M,,0,0,113767,50.0,A32,S
 187,Survived,3,"O'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)",F,,one,0,370365,15.5,,Q
@@ -380,12 +380,12 @@ one,Died,3,"Braund, Mr. Owen Harris",M,22.0,one,0,A/5 21171,7.25,,S
 379,Died,3,"Betros, Mr. Tannous",M,20.0,0,0,2648,4.0125,,C
 380,Died,3,"Gustafsson, Mr. Karl Gideon",M,19.0,0,0,347069,7.775,,S
 381,Survived,one,"Bidois, Miss. Rosalie",F,42.0,0,0,PC 17757,227.525,,C
-382,Survived,3,"Nakid, Miss. Maria (""Mary"")",F,one,0,2,2653,15.7417,,C
+382,Survived,3,"Nakid, Miss. Maria (""Mary"")",F,,0,2,2653,15.7417,,C
 383,Died,3,"Tikkanen, Mr. Juho",M,32.0,0,0,STON/O 2. 3101293,7.925,,S
 384,Survived,one,"Holverson, Mrs. Alexander Oskar (Mary Aline Towner)",F,35.0,one,0,113789,52.0,,S
 385,Died,3,"Plotcharsky, Mr. Vasil",M,,0,0,349227,7.8958,,S
 386,Died,2,"Davies, Mr. Charles Henry",M,18.0,0,0,S.O.C. 14879,73.5,,S
-387,Died,3,"Goodwin, Master. Sidney Leonard",M,one,5,2,CA 2144,46.9,,S
+387,Died,3,"Goodwin, Master. Sidney Leonard",M,,5,2,CA 2144,46.9,,S
 388,Survived,2,"Buss, Miss. Kate",F,36.0,0,0,27849,13.0,,S
 389,Died,3,"Sadlier, Mr. Matthew",M,,0,0,367655,7.7292,,Q
 390,Survived,2,"Lehmann, Miss. Bertha",F,17.0,0,0,SC 1748,12.0,,C
@@ -787,7 +787,7 @@ one,Died,3,"Braund, Mr. Owen Harris",M,22.0,one,0,A/5 21171,7.25,,S
 786,Died,3,"Harmer, Mr. Abraham (David Lishin)",M,25.0,0,0,374887,7.25,,S
 787,Survived,3,"Sjoblom, Miss. Anna Sofia",F,18.0,0,0,3101265,7.4958,,S
 788,Died,3,"Rice, Master. George Hugh",M,8.0,4,one,382652,29.125,,Q
-789,Survived,3,"Dean, Master. Bertram Vere",M,one,one,2,C.A. 2315,20.575,,S
+789,Survived,3,"Dean, Master. Bertram Vere",M,,one,2,C.A. 2315,20.575,,S
 790,Died,one,"Guggenheim, Mr. Benjamin",M,46.0,0,0,PC 17593,79.2,B82 B84,C
 791,Died,3,"Keane, Mr. Andrew ""Andy""",M,,0,0,12460,7.75,,Q
 792,Died,2,"Gaskell, Mr. Alfred",M,16.0,0,0,239865,26.0,,S
@@ -826,7 +826,7 @@ one,Died,3,"Braund, Mr. Owen Harris",M,22.0,one,0,A/5 21171,7.25,,S
 825,Died,3,"Panula, Master. Urho Abraham",M,2.0,4,one,3101295,39.6875,,S
 826,Died,3,"Flynn, Mr. John",M,,0,0,368323,6.95,,Q
 827,Died,3,"Lam, Mr. Len",M,,0,0,1601,56.4958,,S
-828,Survived,2,"Mallet, Master. Andre",M,one,0,2,S.C./PARIS 2079,37.0042,,C
+828,Survived,2,"Mallet, Master. Andre",M,,0,2,S.C./PARIS 2079,37.0042,,C
 829,Survived,3,"McCormack, Mr. Thomas Joseph",M,,0,0,367228,7.75,,Q
 830,Survived,one,"Stone, Mrs. George Nelson (Martha Evelyn)",F,62.0,0,0,113572,80.0,B28,
 831,Survived,3,"Yasbeck, Mrs. Antoni (Selini Alexander)",F,15.0,one,0,2659,14.4542,,C
