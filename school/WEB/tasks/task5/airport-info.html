@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container border border-2 rounded mt-5 p-4 bg-light">
+        <h1 class="text-center">Airport Information System</h1>
+        <div class="container" id="message1"></div>
+        <div class="container" id="message2"></div>
+        <div class="container" id="message3"></div>
+        <div class="container" id="message4"></div>
+    </div>
+
+    </div>
+    <script defer>
+        let airportName = "John F. Kennedy International Airport";
+        let flightNumber1 = "AA101";
+        let destination1 = "Los Angeles";
+        let flightNumber2 = "DL202";
+        let destination2 = "Miami";
+        let gateNumber = "G5";
+        let timeMessage = "10:15 AM";
+
+        let fullMassage1 = "Welcome to " + airportName + ".";
+        let fullMassage2 = "Flight " + flightNumber1 + " is going to " + destination1 + ".";
+        let gateMessage = "Please proceed to Gate " + gateNumber + ".";
+        let message4 = "Boarding starts at " + timeMessage + ".";
+        
+        document.getElementById("message1").innerHTML = fullMassage1;
+        document.getElementById("message2").innerHTML = fullMassage2;
+        document.getElementById("message3").innerHTML = gateMessage;
+        document.getElementById("message4").innerHTML = message4;
+
+        document.getElementById("message1").classList.add("alert-primary", "alert");
+        document.getElementById("message2").classList.add("alert-warning", "alert");
+        document.getElementById("message3").classList.add("alert-success", "alert");
+        document.getElementById("message4").classList.add("alert-info", "alert");
+
+    </script>
+</body>
+
+</html>
