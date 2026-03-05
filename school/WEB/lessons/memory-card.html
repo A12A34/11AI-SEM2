@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container row">
+        <h1 class="col">Memory Card Game</h1>
+        <button class="col btn btn-primary">Start Game</button>
+    </div>
+    <div class="container row">
+        <img id="img1"
+            src="https://th.bing.com/th/id/OIP.JzuPWC-RmQ2P5e5K7kV6XAHaNY?w=115&h=208&c=7&r=0&o=7&pid=1.7&rm=3"
+            onclick="flip(this.id)" alt="Card 1" class="img-fluid col-3">
+        <img id="img2" onclick="flip(this.id)" alt="Card 2" class="img-fluid col-3">
+        <img id="img3" onclick="flip(this.id)" alt="Card 3" class="img-fluid col-3">
+        <img id="img4" onclick="flip(this.id)" alt="Card 4" class="img-fluid col-3">
+    </div>
+    <div class="container row mt-3">
+        <button onclick="randomnumber()" class="col btn btn-success">get random number</button>
+    </div>
+    </div>
+    <script defer>
+        pizaa_link = "https://th.bing.com/th/id/OIP.PtUDngJCGphIUQ5XRFw49AHaHa?w=183&h=183&c=7&r=0&o=7&pid=1.7&rm=3";
+        question_mark_link = "https://th.bing.com/th/id/OIP.JzuPWC-RmQ2P5e5K7kV6XAHaNY?w=115&h=208&c=7&r=0&o=7&pid=1.7&rm=3"
+        umperlaa_link = "https://th.bing.com/th/id/OIP.RCdYrUnRwGANGLIs2JikwwHaHa?w=187&h=187&c=7&r=0&o=7&pid=1.7&rm=3"
+        burger_link = "https://th.bing.com/th/id/OIP.5fuTFtW7QmMyZKhYx_NEzgHaHa?w=200&h=200&c=7&r=0&o=7&pid=1.7&rm=3"
+        const cardImagesIDs = ["img1", "img2", "img3", "img4"];
+        images_list = [pizaa_link, question_mark_link, umperlaa_link, burger_link];
+        for (let id of cardImagesIDs) {
+            document.getElementById(id).src = question_mark_link;
+        }
+        function flip(imgid) {
+            let randomNum = Math.floor(Math.random() * 4);
+            let img = document.getElementById(imgid);
+            img.src = images_list[randomNum];
+        }
+        function randomnumber() {
+            let randomNum = Math.floor(Math.random() * 4);
+            alert("Random number generated: " + randomNum);
+        }
+    </script>
+</body>
+
+</html>
