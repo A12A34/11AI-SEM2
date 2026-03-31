@@ -22,6 +22,12 @@
                 <div class="col-auto">
                     <img src="images/orange.jpg" alt="img3" id="img3" width="120">
                 </div>
+                <div class="col-auto">
+                    <img src="images/carrots.png" alt="img4" id="img4" width="120">
+                </div>
+                <div class="col-auto">
+                    <img src="images/strawberry.png" alt="img5" id="img5" width="120">
+                </div>
             </div>
 
             <form>
@@ -53,7 +59,53 @@
 
         </div>
     </div>
-
+    <script>
+        const images = ["images/Apple.png", "images/banana.png", "images/orange.jpg", "images/carrots.png", "images/strawberry.png"];
+        const imgGetId = [document.getElementById("img1"), document.getElementById("img2"), document.getElementById("img3"), document.getElementById("img4"), document.getElementById("img5")];
+        const img = ["img1", "img2", "img3", "img4", "img5"];
+        const wins = document.getElementById("wins");
+        const losts = document.getElementById("losts");
+        let gameInterval = null;
+        function getSpeed() {
+            if (document.getElementById("easy").checked) {
+                return 1000;
+            } else if (document.getElementById("medium").checked) {
+                return 500;
+            } else if (document.getElementById("hard").checked) {
+                return 250;
+            } else {
+                return 1000;
+            }
+        }
+        function startGame() {
+            const speed = getSpeed();
+            document.getElementById("START").disabled = true;
+            document.getElementById("Stop").disabled = false;
+            gameInterval = setInterval(changePicture, speed);
+            if (gameInterval !== null) {
+                changePicture();
+            }
+        }
+        function randomNumber(max_number) {
+            return Math.floor(Math.random() * max_number);
+        }
+        function changePicture() {
+            for (let i = 0; i < img.length; i++) {
+                document.getElementById(img[i]).src = images[randomNumber(images.length)];
+            }
+        }
+        function stopSpinning() {
+            document.getElementById("START").disabled = false;
+            document.getElementById("Stop").disabled = true;
+            clearInterval(gameInterval);
+            gameInterval = null;
+            if (imgGetId[0].src === imgGetId[1].src && imgGetId[1].src === imgGetId[2].src && imgGetId[2].src === imgGetId[3].src && imgGetId[3].src === imgGetId[4].src) {
+                wins.innerText = parseInt(wins.innerText) + 1;
+            } else {
+                losts.innerText = parseInt(losts.innerText) + 1;
+            }
+        }
+    </script>
 </body>
 
 </html>
