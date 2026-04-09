@@ -138,19 +138,19 @@
             departure_body.innerHTML = "";
             for (let i = 0; i < flight_data.length; i++) {
                 let flight = flight_data[i];
-                let row = `<tr>
-                    <td>${flight.flight_date}</td>
-                    <td>${flight.flight_status}</td>
-                    <td>${flight.departure.airport}</td>
-                    <td>${flight.departure.terminal}</td>
-                    <td>${flight.departure.delay}</td>
-                    <td>${flight.departure.scheduled}</td>
-                    <td>${flight.departure.estimated}</td>
-                    <td>${flight.departure.actual}</td>
-                    <td>${flight.departure.timezone}</td>
-                    <td>${flight.airline.name}</td>
-                    <td>${flight.flight.iata}</td>
-                </tr>`;
+                let row =`<tr>
+                            <td>${flight.flight_date}</td>
+                            <td>${flight.flight_status}</td>
+                            <td>${flight.departure.airport}</td>
+                            <td>${flight.departure.terminal}</td>
+                            <td>${flight.departure.delay}</td>
+                            <td>${flight.departure.scheduled}</td>
+                            <td>${flight.departure.estimated}</td>
+                            <td>${flight.departure.actual}</td>
+                            <td>${flight.departure.timezone}</td>
+                            <td>${flight.airline.name}</td>
+                            <td>${flight.flight.iata}</td>
+                        </tr>`;
                 departure_body.innerHTML += row;
             }
 
@@ -161,18 +161,18 @@
             for (let i = 0; i < flight_data.length; i++) {
                 let flight = flight_data[i];
                 let row = `<tr>
-                    <td>${flight.flight_date}</td>
-                    <td>${flight.flight_status}</td>
-                    <td>${flight.arrival.airport}</td>
-                    <td>${flight.arrival.terminal}</td>
-                    <td>${flight.arrival.delay}</td>
-                    <td>${flight.arrival.scheduled}</td>
-                    <td>${flight.arrival.estimated}</td>
-                    <td>${flight.arrival.actual}</td>
-                    <td>${flight.arrival.timezone}</td>
-                    <td>${flight.airline.name}</td>
-                    <td>${flight.flight.iata}</td>
-                </tr>`;
+                            <td>${flight.flight_date}</td>
+                            <td>${flight.flight_status}</td>
+                            <td>${flight.arrival.airport}</td>
+                            <td>${flight.arrival.terminal}</td>
+                            <td>${flight.arrival.delay}</td>
+                            <td>${flight.arrival.scheduled}</td>
+                            <td>${flight.arrival.estimated}</td>
+                            <td>${flight.arrival.actual}</td>
+                            <td>${flight.arrival.timezone}</td>
+                            <td>${flight.airline.name}</td>
+                            <td>${flight.flight.iata}</td>
+                        </tr>`;
                 arrival_body.innerHTML += row;
             }
         }
