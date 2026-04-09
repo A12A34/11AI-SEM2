@@ -12,11 +12,14 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-light text-center">
+<body class="bg-light text-center" id="body">
+    <div class="position-absolute bottom-0 end-0 p-3 rounded" id="temp-message" style="z-index: 1050;">
+        <button onclick="load_flights()" class="btn btn-sm btn-primary">Reload</button>
+    </div>
     <div class="container mt-3 p-3 bg-white border  container-fluid">
         <h1>Airport Flight Screen</h1>
         <div class="row">
-            <div class="col">
+            <div class="col-8">
                 <select id="select-flight" class="form-select mb-3">
                     <option value="0">Select Flight</option>
                     <option value="BAH">Bahrain Airport</option>
@@ -26,15 +29,17 @@
                     <option value="SAW">Istanbul Sabiha Airport</option>
                 </select>
             </div>
-            <div class="col">
+            <div class="col-4">
                 <button id="show" onclick="load_flights()" class="btn btn-primary mb-3 w-100">Show Flight
                     Details</button>
             </div>
 
         </div>
-        <div class="row">
-            <label class="fw-bold">current date/ time:</label>
-            <span id="date-label" class="fw-bold d-inline-block"></span>
+        <div class="row mb-3">
+            <div class="col-12 d-flex justify-content-center align-items-center gap-2">
+                <label class="fw-bold mb-0">current date/ time:</label>
+                <span id="date-label"></span>
+            </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 table-responsive mb-3 border p-1 overflow-auto bordered">
@@ -99,21 +104,33 @@
             LoadArrivalFlights(Airport_value)
         }
         function update_time() {
-            let current_time = new Date();
+            const current_time = new Date();
             let time_label = document.getElementById("date-label");
-            time_label.textContent = current_time.toLocaleTimeString();
+            time_label.innerHTML = current_time.toString();
         }
+
+        update_time();
         setInterval(update_time, 1000);
         async function LoadDepartureFlights(Airport_value) {
+            Sendmassage("Loading data...", 3000, 1);
             let url = `https://api.aviationstack.com/v1/flights?access_key=${API_KEY}&dep_iata=${Airport_value}`;
             const response = await fetch(url);
             const data = await response.json();
+            if (data == null || data.data == null || data.data.length == 0) {
+                Sendmassage("No data found for this airport", 3000, 0);
+                return;
+            }
             BuildDepartureTable(data.data);
         }
         async function LoadArrivalFlights(Airport_value) {
+            Sendmassage("Loading data...", 3000, 1);
             let url = `https://api.aviationstack.com/v1/flights?access_key=${API_KEY}&arr_iata=${Airport_value}`;
             const response = await fetch(url);
             const data = await response.json();
+            if (data == null || data.data == null || data.data.length == 0) {
+                Sendmassage("No data found for this airport", 3000, 0);
+                return;
+            }
             BuildArrivalTable(data.data);
         }
         function BuildDepartureTable(flight_data) {
@@ -158,6 +175,28 @@
                 </tr>`;
                 arrival_body.innerHTML += row;
             }
+        }
+        function Sendmassage(massage, duration = 3000, type = 2) {
+            let alert_class = {
+                0: "danger",
+                1: "success",
+                2: "info"
+            }
+            let body_element = document.getElementById("body");
+            const existingMsg = document.querySelector(".temp-message");
+            if (existingMsg) existingMsg.remove();
+            let messageDiv = document.createElement("div");
+            messageDiv.className = "temp-message rounded position-fixed top-0 end-0";
+            messageDiv.style.zIndex = "9999";
+            messageDiv.innerHTML = `
+        <div class="alert alert-${alert_class[type]} shadow-lg" role="alert">
+            <div class="d-flex align-items-center">
+                <strong>Status:</strong> 
+                <span class="ms-2">${massage}</span>
+            </div>
+        </div>`;
+            body_element.appendChild(messageDiv);
+            setTimeout(() => messageDiv.remove(), duration);
         }
     </script>
 </body>
